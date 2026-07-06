@@ -91,12 +91,14 @@ export default function Beranda() {
               Ekstraksi fitur lokal dengan filter n-gram (2 sampai 5) di atas
               representasi Word2Vec dan GloVe untuk menangkap pola frasa pendek.
             </p>
-            <p className="kecil" style={{ margin: "10px 0 0" }}>
-              <Icon nama="centang" ukuran={14} /> Deep Feature Mapping
-            </p>
-            <p className="kecil" style={{ margin: "4px 0 0" }}>
-              <Icon nama="centang" ukuran={14} /> Pattern Recognition
-            </p>
+            <div className="baris-ikon">
+              <span className="ikon-cek"><Icon nama="centang" ukuran={15} /></span>
+              Deep Feature Mapping
+            </div>
+            <div className="baris-ikon">
+              <span className="ikon-cek"><Icon nama="centang" ukuran={15} /></span>
+              Pattern Recognition
+            </div>
           </div>
           <div className="card card-hover">
             <div className="hasil-kepala">
@@ -109,12 +111,14 @@ export default function Beranda() {
               untuk akurasi linguistik tertinggi; menjadi mesin produksi
               OpiniScope.
             </p>
-            <p className="kecil" style={{ margin: "10px 0 0" }}>
-              <Icon nama="centang" ukuran={14} /> Contextual Awareness
-            </p>
-            <p className="kecil" style={{ margin: "4px 0 0" }}>
-              <Icon nama="centang" ukuran={14} /> Superior Nuance Detection
-            </p>
+            <div className="baris-ikon">
+              <span className="ikon-cek"><Icon nama="centang" ukuran={15} /></span>
+              Contextual Awareness
+            </div>
+            <div className="baris-ikon">
+              <span className="ikon-cek"><Icon nama="centang" ukuran={15} /></span>
+              Superior Nuance Detection
+            </div>
           </div>
         </div>
       </section>

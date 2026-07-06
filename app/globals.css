@@ -217,11 +217,17 @@ table.tabel { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
 .tabel tbody tr:last-child td { border-bottom: none; }
 .tabel tbody tr:hover td { background: #f8fafc; }
 
+
+/* ---------- Perbaikan tata letak statistik dan ikon ---------- */
+.stat { display: flex; flex-direction: column; gap: 2px; }
+svg { vertical-align: middle; }
+.baris-ikon { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 0.86rem; }
+.baris-ikon .ikon-cek { color: var(--brand); display: inline-flex; }
+
 /* ---------- Dashboard ---------- */
 .panel-kepala { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
 .panel-kepala h3 { margin: 0; }
-.angka-besar { font-size: 2rem; font-weight: 800; }
-.angka-besar small { font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-left: 8px; }
+.angka-besar { font-size: 2.1rem; font-weight: 800; line-height: 1.1; margin-top: 6px; }
 .tag-sample {
   font-size: 0.66rem; font-weight: 700; letter-spacing: 0.8px; color: var(--amber);
   border: 1px solid #f3d9a4; background: var(--amber-bg);

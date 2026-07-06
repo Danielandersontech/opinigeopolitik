@@ -123,7 +123,9 @@ export default function Dashboard() {
                 <span className="dim-nama">{d.nama}</span>
                 <div className="angka-besar num" style={{ color: WARNA_KELAS[teratas.label] }}>
                   {Math.round((teratas.jumlah / total) * 100)}%
-                  <small>{tampil(teratas.label)}</small>
+                </div>
+                <div className="kecil" style={{ color: WARNA_KELAS[teratas.label], fontWeight: 700 }}>
+                  {tampil(teratas.label)}
                 </div>
                 <div style={{ marginTop: 6 }}>
                   {data.map((x) => (
@@ -161,10 +163,10 @@ export default function Dashboard() {
               </button>
             </div>
           </div>
-          {barisUrut.map((b) => (
+          {barisUrut.map((b, i) => (
             <BarisBar
               key={`${b.model}-${b.dimensi}`}
-              nama={`${b.model} \u00b7 ${b.dimensi}`}
+              nama={`${i + 1}. ${b.model} \u00b7 ${b.dimensi}`}
               teksNilai={fmt(b[metrik])}
               persen={b[metrik] * 100}
               warna={b.model.includes("RoBERTa") ? "#00687a" : "#94a3b8"}
