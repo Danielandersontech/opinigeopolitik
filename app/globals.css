@@ -94,6 +94,7 @@ button { font: inherit; }
 .card-hover { transition: border-color 0.15s ease, box-shadow 0.15s ease; }
 .card-hover:hover { border-color: var(--line-kuat); box-shadow: 0 4px 12px rgba(16, 24, 40, 0.08); }
 .card + .card { margin-top: 16px; }
+.grid .card + .card { margin-top: 0; }
 
 .grid { display: grid; gap: 16px; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -169,7 +170,7 @@ textarea.area:focus { outline: none; border-color: var(--brand); box-shadow: 0 0
 
 /* ---------- Kartu hasil per dimensi ---------- */
 .hasil-kartu { border-top: 3px solid var(--aksen, var(--brand)); }
-.hasil-kepala { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.hasil-kepala { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
 .dim-nama {
   font-size: 0.72rem; font-weight: 700; letter-spacing: 1.6px;
   text-transform: uppercase; color: var(--muted);
@@ -225,7 +226,7 @@ svg { vertical-align: middle; }
 .baris-ikon .ikon-cek { color: var(--brand); display: inline-flex; }
 
 /* ---------- Dashboard ---------- */
-.panel-kepala { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.panel-kepala { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
 .panel-kepala h3 { margin: 0; }
 .angka-besar { font-size: 2.1rem; font-weight: 800; line-height: 1.1; margin-top: 6px; }
 .tag-sample {
@@ -277,6 +278,24 @@ pre.blok {
 .footer-links { display: flex; gap: 18px; }
 .footer-links a { color: var(--muted); font-size: 0.84rem; }
 .footer-links a:hover { color: var(--brand-tua); }
+
+
+/* ---------- Responsif ponsel ---------- */
+@media (max-width: 760px) {
+  .wrap { padding: 0 16px; }
+  .nav-inner { height: auto; flex-wrap: wrap; padding: 10px 0; gap: 6px 14px; }
+  .brand small { display: none; }
+  .nav-links { margin-left: 0; width: 100%; }
+  .nav-links a { padding: 6px 10px; font-size: 0.85rem; }
+  .section { padding: 30px 0; }
+  .hero { padding: 40px 0 18px; }
+  .hero-stats { gap: 18px 28px; margin-top: 22px; }
+  .card { padding: 18px; }
+  .cta .btn { flex: 1 1 auto; }
+  .angka-besar { font-size: 1.9rem; }
+  .label-utama { font-size: 1.35rem; }
+  h2 { font-size: 1.3rem; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
